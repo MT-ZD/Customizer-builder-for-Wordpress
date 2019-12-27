@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Customizer builder for Wordpress by MTZD</title>
+        <link rel="stylesheet" href="less/style.css">
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <script src="js/jszip.min.js"></script>
+        <script src="js/FileSaver.js"></script>
+    </head>
+    <body>
+        
+        <header>
+
+            <div class="title">
+                Customizer builder for Wordpress<br>
+                <span>by <a href="https://mtzd.pro/" target="_blank">MTZD</a></span>
+            </div>
+
+            <div class="textDomain">
+                Theme text domain: <span id="textDomain" contenteditable>sampletheme</span>
+            </div>
+
+            <div class="refresh">
+                <img src="img/refresh.svg" alt="">
+            </div>
+
+        </header>
+
+        <div class="popup">
+            <div class="wrapper">
+                <fieldset>
+                    <legend>CODENAME</legend>
+                    <input type="text" id="s_codename">
+                </fieldset>
+                <fieldset>
+                    <legend>NAME</legend>
+                    <input type="text" id="s_name">
+                </fieldset>
+                <button>CLOSE</button>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <div class="navigation">
+
+                <!-- JS inserts code -->
+
+                <div class="addNewSection">
+                    <img src="img/add.svg" alt="">
+                    Add New Section
+                </div>
+
+            </div>
+
+            <main>
+
+                <div class="frame">
+
+                    <fieldset>
+                        <legend>NAME</legend>
+                        <input type="text" id="name">
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>CODENAME</legend>
+                        <input type="text" id="codename">
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>TYPE</legend>
+                        <select id="type">
+                            <option value="text">Text</option>
+                            <option value="textarea">Textarea</option>
+                            <option value="color">Color</option>
+                            <option value="file">File</option>
+                            <option value="tinymce">TinyMCE Text Editor</option>
+                            <option value="image">Image</option>
+                            <option value="checkbox">Checkbox</option>
+                            <option value="radio">Radio</option>
+                            <option value="select">Select</option>
+                            <option value="dropdown-pages">Dropdown Pages</option>
+                            <option value="email">Email</option>
+                            <option value="url">URL</option>
+                            <option value="number">Number</option>
+                            <option value="date">Date</option>
+                            <option value="hidden">Hidden</option>
+                        </select>
+                    </fieldset>
+
+                    <fieldset class="choices">
+                        <legend>CHOICES</legend>
+                        <button>Add</button>
+                    </fieldset>
+
+                    <fieldset class="default">
+                        <legend>DEFAULT</legend>
+                        <textarea id="default"></textarea>
+                        <input type="color" id="default">
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>DESCRIPTION</legend>
+                        <textarea id="description"></textarea>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>TRANSPORT</legend>
+                        <select id="transport">
+                            <option value="refresh" selected>Refresh</option>
+                            <option value="postMessage">Post Message</option>
+                        </select>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>SANITIZE CALLBACK</legend>
+                        <input type="text" id="sanitize">
+                    </fieldset>
+
+                </div>
+
+            </main>
+
+            <div class="file">
+
+                <div class="fileName">
+                    File: customizer/<span>empty</span>.php
+                </div>
+
+                <code></code>
+
+                <div class="export">
+                    EXPORT
+                </div>
+
+            </div>
+
+        </div>
+
+        <script src="js/script.js"></script>
+    </body>
+</html>
